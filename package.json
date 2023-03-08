@@ -7,7 +7,7 @@
     "dev": "tsc -w"
   },
   "bin": {
-    "quick-cli": "bin/cli.js"
+    "cligetter": "bin/cli.js"
   },
   "files": [
     "bin",
