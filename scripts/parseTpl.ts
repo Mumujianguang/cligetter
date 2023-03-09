@@ -6,7 +6,7 @@ import * as path from 'path';
  * @param type 
  * @returns 
  */
-export default function parseTpl(type = 'default') {
+export default function parseTpl(type = 'blank') {
     const basePath = path.resolve(__dirname, `../template/${type}`);
 
     return {

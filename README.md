@@ -1,5 +1,10 @@
 # Introduction
-一款用于快速生成 [cli 开发模版] 的 cli 工具
+一款用于快速生成 ***[cli 开发模版]*** 的 cli 工具
+
+(A cli tool for quickly generating ***cli development template***)
+
+[![version](https://img.shields.io/npm/v/cligetter.svg)](https://www.npmjs.com/package/cligetter)
+[![downloads](https://badgen.net/npm/dt/cligetter)](https://www.npmjs.com/package/cligetter)
 
 ## Install
 ```
@@ -7,17 +12,44 @@ npm install cligetter -g
 ```
 
 ## Usage
-获取帮助信息
+
+#### Get help
 ```
 cligetter -h
 ```
-创建一个默认的 cli 开发模版
+
+Create a default cli development template
 ```sh
-# cligetter new <projectName>
-cligetter new my-cli
+cligetter new <projectName>
+cd <projectName>
+npm install
+npm run dev
 ```
-创建一个指定模版的相对生成路径, 默认为执行命令时所在目录
+
+### -t, --template
+You can specify the template type. Currently, ***blank*** and ***cac*** are supported.
+
+For example, use ***cac***:
 ```sh
-# cligetter new <projectName> --path=<path>
-cligetter new my-cli --path=./
+cligetter new my-cli -t cac
+cd my-cli
+npm install
+npm run dev
+```
+The ***cac*** template is packaged with rollup by default,
+after the builder starts, you can enter:
+```sh
+node ./bin/cli.js -h
+```
+or:
+```sh
+npm link
+my-cli -h
+```
+Next, you can start developing your cli from ***scripts/index.ts***
+
+### --path
+When creating a template, you can specify the directory through the path option
+```sh
+cligetter new <projectName> --path=<path>
 ```

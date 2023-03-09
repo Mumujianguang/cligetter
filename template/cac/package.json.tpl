@@ -1,28 +1,18 @@
 {
-  "name": "cligetter",
-  "version": "1.1.0",
-  "description": "一款用于快速生成 [cli 开发模版] 的 cli 工具",
-  "main": "index.js",
+  "name": "{{projectName}}",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/cli.js",
   "type": "module",
   "scripts": {
     "dev": "pnpm run build -w",
     "build": "rollup --config rollup.config.ts --configPlugin typescript"
   },
   "bin": {
-    "cligetter": "bin/cligetter.js"
+    "{{projectName}}": "./bin/index.js"
   },
-  "files": [
-    "bin",
-    "dist",
-    "template",
-    "package.json"
-  ],
-  "keywords": [
-    "cli",
-    "cli tool",
-    "frontend"
-  ],
-  "author": "Mumujianguang",
+  "keywords": [],
+  "author": "",
   "license": "ISC",
   "devDependencies": {
     "@rollup/plugin-commonjs": "^24.0.1",
@@ -38,10 +28,5 @@
     "rollup": "^3.18.0",
     "tslib": "^2.5.0",
     "typescript": "^4.9.5"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git@github.com:Mumujianguang/cligetter.git"
-  },
-  "homepage": "https://github.com/Mumujianguang/cligetter"
+  }
 }
