@@ -13,7 +13,7 @@ npm install cligetter -g
 
 ## Usage
 
-#### Get help
+### Get help
 ```
 cligetter -h
 ```
